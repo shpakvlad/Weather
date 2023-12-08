@@ -1,0 +1,46 @@
+/************************************************/
+/*                    BASIC                     */
+/************************************************/*
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+
+    &:focus {
+        border: none;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+
+    max-height: 100%;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/************************************************/
+/*                    RESULT                    */
+/************************************************/
+#result {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+p {
+    
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: light;
+}
