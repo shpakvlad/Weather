@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-    <link rel="stylesheet" href="./assets/css/vendors/normalize.css">
-    <link rel="stylesheet" href="./assets/css/vars.css">
-    <link rel="stylesheet" href="./assets/css/fonts.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/vendors/normalize.css" />
+        <link rel="stylesheet" href="./assets/css/vars.css" />
+        <link rel="stylesheet" href="./assets/css/fonts.css" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>   
-    <div class="wrapper">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="base-panel">
+                <header>
+                    <input type="text" name="city" id="cityInp" />
+                    <button id="cityBtn">Load</button>
+                    <button id="resetLocation">Reset location</button>
+                </header>
 
-        <input type="text" name="city"  id="cityInp">
-        <button id="cityBtn">Load</button>
+                <div id="time-weather-panel">
+                    <div id="time-panel">
+                        <p id="time">12:00</p>
+                        <p>data</p>
+                        <p>data</p>
+                        <p>data</p>
+                        <p>data</p>
+                    </div>
 
-        <div id="result"></div>
+                    <!-- <div id="weather-panel">
+                    <div id="general-data">
+                        <img src="#" alt="weather picture">
+                        <p>data</p>
+                        <p>data</p>
+                        <p>data</p>
+                        <p>data</p>
+                    </div>
 
-    </div>
+                    <div id="addition-data">
+                        <p>data</p>
+                        <p>data</p>
+                        <p>data</p>
+                        <p>data</p>
+                    </div>
+                </div>
 
-    <script defer src="./assets/js/main.js"></script>
-</body>
+                <div id="history-panel">
+                    <p id="history-haeder">History</p>
+                    <p>data</p>
+                    <p>data</p>
+                    <p>data</p>
+                    <p>data</p>
+                </div> -->
+                </div>
+
+                <div id="result"></div>
+            </div>
+        </div>
+
+        <script defer src="./assets/js/main.js"></script>
+    </body>
 </html>
