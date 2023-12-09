@@ -16,50 +16,82 @@
         <div class="wrapper">
             <div id="base-panel">
                 <header>
-                    <input type="text" name="city" id="cityInp" />
-                    <button id="cityBtn">Load</button>
-                    <button id="resetLocation">Reset location</button>
+                    <div id="header-search-panel">
+                        <input type="text" name="city" id="city-input" />
+                        <button id="city-btn">
+                            <ion-icon name="search"></ion-icon>
+                        </button>
+                    </div>
+                    <button id="reset-location">
+                        <ion-icon name="home"></ion-icon>
+                    </button>
+
+                    <button id="param-btn">
+                        <ion-icon name="cog"></ion-icon>
+                    </button>
                 </header>
 
                 <div id="time-weather-panel">
                     <div id="time-panel">
                         <p id="time">12:00</p>
-                        <p>data</p>
-                        <p>data</p>
-                        <p>data</p>
-                        <p>data</p>
+                        <p>восход : <span id="sunrise"></span></p>
+                        <p>заход : <span id="sunset"></span></p>
+                        <p>длина : <span id="long-day"></span></p>
                     </div>
 
-                    <!-- <div id="weather-panel">
-                    <div id="general-data">
-                        <img src="#" alt="weather picture">
-                        <p>data</p>
-                        <p>data</p>
-                        <p>data</p>
-                        <p>data</p>
-                    </div>
+                    <div id="weather-panel">
+                        <div id="weater-general">
+                            <img
+                                id="weather-img"
+                                src="#"
+                                alt="weather picture"
+                            />
+                            <div id="general-temp">
+                                <p><span id="w-temp"></span></p>
+                                <p>Ощущается : <span id="w-feel"></span></p>
+                            </div>
+                        </div>
 
-                    <div id="addition-data">
+                        <div id="weather-info">
+                            <div id="weather-data">
+                                <p>Описание : <span id="w-desc"></span></p>
+                                <p>Влажность : <span id="w-hum"></span></p>
+                                <p>Давление : <span id="w-press"></span></p>
+                                <p>Облачность : <span id="w-clouds"></span></p>
+                            </div>
+
+                            <div id="addition-data">
+                                <p>
+                                    Скорость ветра : <span id="w-speed"></span>
+                                </p>
+                                <p>Порывы : <span id="w-gust"></span></p>
+                                <p>Направление : <span id="w-deg"></span></p>
+                                <p>
+                                    Видимость : <span id="w-visibility"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 
+                    <div id="history-panel">
+                        <p id="history-haeder">History</p>
                         <p>data</p>
                         <p>data</p>
                         <p>data</p>
                         <p>data</p>
                     </div>
+                     -->
                 </div>
-
-                <div id="history-panel">
-                    <p id="history-haeder">History</p>
-                    <p>data</p>
-                    <p>data</p>
-                    <p>data</p>
-                    <p>data</p>
-                </div> -->
-                </div>
-
-                <div id="result"></div>
             </div>
         </div>
 
+        <script src="./assets/js/moment.min.js"></script>
+        <script src="./assets/js/Weather.js"></script>
         <script defer src="./assets/js/main.js"></script>
+
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+        ></script>
     </body>
 </html>
