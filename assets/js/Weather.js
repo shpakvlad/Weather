@@ -115,13 +115,25 @@ class Weather {
             let longDay = sunset - sunrise;
             timeOutput.textContent = this.calcTime(longDay, timezone);
 
+            let nowTime = document.querySelector("#time");
+            let secTime = document.querySelector("#seconds");
+            
+            this.showTime(nowTime, secTime);
+
         } catch (error) {
-            console.error(error.message);
+            // console.error(error.message);
+            
         }
     }
     
     calcTime(time, timezone) {
-        return moment.utc(time,'X').add(timezone,'seconds').format('HH:mm');
-        
+        return moment.utc(time,'X').add(timezone,'seconds').format('HH:mm');       
     }
+
+    showTime(timeElem, secTime) {
+        setInterval(() => {
+            let nowTime = moment().format('HH:mm');
+            timeElem.innerHTML = nowTime + "<span>: " + moment().format('ss'); + "</span>";
+        }, 1000);       
+    }  
 }

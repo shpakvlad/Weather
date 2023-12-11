@@ -17,26 +17,34 @@
             <div id="base-panel">
                 <header>
                     <div id="header-search-panel">
-                        <input type="text" name="city" id="city-input" />
-                        <button id="city-btn">
-                            <ion-icon name="search"></ion-icon>
+                        <div id="search">
+                            <input type="text" name="city" id="city-input" />
+                            <button id="city-btn">
+                                <ion-icon name="search"></ion-icon>
+                            </button>
+                        </div>
+
+                        <button id="reset-location">
+                            <ion-icon name="home"></ion-icon>
+                        </button>
+
+                        <button id="param-btn">
+                            <ion-icon name="cog"></ion-icon>
                         </button>
                     </div>
-                    <button id="reset-location">
-                        <ion-icon name="home"></ion-icon>
-                    </button>
-
-                    <button id="param-btn">
-                        <ion-icon name="cog"></ion-icon>
-                    </button>
+                    <div id="search-history">
+                        <p></p>
+                    </div>
                 </header>
 
                 <div id="time-weather-panel">
                     <div id="time-panel">
-                        <p id="time">12:00</p>
-                        <p>восход : <span id="sunrise"></span></p>
-                        <p>заход : <span id="sunset"></span></p>
-                        <p>длина : <span id="long-day"></span></p>
+                        <p id="time">00:00</p>
+                        <div id="time-info">
+                            <p>восход : <span id="sunrise"></span></p>
+                            <p>заход : <span id="sunset"></span></p>
+                            <p>длина : <span id="long-day"></span></p>
+                        </div>
                     </div>
 
                     <div id="weather-panel">
