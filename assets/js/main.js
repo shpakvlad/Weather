@@ -6,10 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     weather.getWeather("Klaipeda");
 });
 
-document.querySelector("#param-btn").addEventListener("click", function () {
+document.querySelector("#reset-location").addEventListener("click", function () {
     weather.getWeather("Klaipeda");
 
-    console.log('OK');
 })
 
 document.querySelector("#city-btn").addEventListener("click", function () {

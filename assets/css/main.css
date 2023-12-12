@@ -65,7 +65,7 @@ p {
 /************************************************/
 #base-panel {
     margin: auto;
-    max-width: 1230px;
+    max-width: 1235px;
     padding: 40px;
     background-color: var(--base-color);
     border-radius: 20px;
@@ -162,10 +162,6 @@ header ion-icon {
 /************************************************/
 /*              TIME-WEATHER-PANEL              */
 /************************************************/
-#weather-panel {
-    width: 100%;
-    display: flex;
-}
 
 #time-weather-panel {
     margin-top: 30px;
@@ -176,7 +172,7 @@ header ion-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 320px;
+    width: 430px;
     padding: 20px;
     margin-right: 30px;
     border-radius: 10px;
@@ -197,7 +193,7 @@ header ion-icon {
 /*                     TIME                     */
 /************************************************/
 #time {
-    width: 265px;
+    width: 270px;
 }
 
 #time span {
@@ -207,9 +203,12 @@ header ion-icon {
 /************************************************/
 /*                WEATHER-PANEL                 */
 /************************************************/
-#weather-panel {
-    display: flex;
-    flex-direction: column;
+#city-name {
+    font: 50px "bold";
+}
+
+#weather {
+    width: 100%;
     padding: 20px;
     border-radius: 10px;
     background: rgb(0, 1, 87);
@@ -219,6 +218,15 @@ header ion-icon {
         rgba(51, 2, 91, 1) 51%,
         rgba(48, 48, 50, 1) 93%
     );
+}
+#weather-panel {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: repeat(1fr, 3);
+
+
 }
 
 #w-temp {
@@ -235,15 +243,26 @@ header ion-icon {
 }
 
 #weather-data {
-    /* margin-right: 50px; */
-    width: 350px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
 }
 
 #weather-img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     width: 200px;
-    margin-right: 150px;
 }
 
 #weather-info {
     display: flex;
+}
+
+#general-temp {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+}
+
+#addition-data {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
 }

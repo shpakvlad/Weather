@@ -28,16 +28,27 @@ class Weather {
 
             const weatherData = await weatherResponse.json();
 
+            for (const key in weatherData) {
+                if (Object.hasOwnProperty.call(weatherData, key)) {
+                    const element = weatherData[key];
+                    
+                    if (element === undefined) {
+                        element = 'N/A';
+                    }
+                }
+            }
+
+
             document.querySelector("#weather-img").src =
                 "./assets/img/png/" +
                 weatherData.weather[0].icon +
                 ".png";
   
             let wTemp = document.querySelector("#w-temp");
-            wTemp.innerHTML = `${weatherData.main.temp.toFixed(0)} &degC`;
+            wTemp.innerHTML = `${Number(weatherData.main.temp.toFixed(0))} &degC`;
 
             let wFeel = document.querySelector("#w-feel");
-            wFeel.innerHTML = `${weatherData.main.feels_like.toFixed(0)} &degC`;
+            wFeel.innerHTML = `${Number(weatherData.main.feels_like.toFixed(0))} &degC`;
 
             let wDesc = document.querySelector("#w-desc");
             wDesc.innerHTML = `${weatherData.weather[0].description}`;
@@ -52,10 +63,10 @@ class Weather {
             wClouds.innerHTML = `${weatherData.clouds.all} %</p>`;
 
             let wSpeed = document.querySelector("#w-speed");
-            wSpeed.innerHTML = `${weatherData.wind.speed.toFixed(1)} м./с.</p>`;
+            wSpeed.innerHTML = `${Number(weatherData.wind.speed.toFixed(1))} м./с.</p>`;
 
             let wGust = document.querySelector("#w-gust");
-            wGust.innerHTML = `${weatherData.wind.gust.toFixed(1)} м./с.</p>`;
+            wGust.innerHTML = `${Number(weatherData.wind.gust.toFixed(1))} м./с.</p>`;
 
             let wDeg = document.querySelector("#w-deg");
             let windDeg = weatherData.wind.deg;
@@ -100,6 +111,11 @@ class Weather {
             let wVisibility = document.querySelector("#w-visibility");
             wVisibility.innerHTML = `${weatherData.visibility} м.</p>`;
 
+            let cityname = document.querySelector("#city-name");
+            cityname.textContent = this.city;
+
+
+            console.log(this.city);
 
             let timeOutput = document.querySelector("#long-day");
             let sunriceOutput = document.querySelector("#sunrise");
@@ -121,7 +137,7 @@ class Weather {
             this.showTime(nowTime, secTime);
 
         } catch (error) {
-            // console.error(error.message);
+            console.error(error.message);
             
         }
     }
